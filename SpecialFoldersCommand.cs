@@ -11,6 +11,8 @@ namespace NETTestBed
     {
         [Option("-f|--filter <REGEX>", Description = "Filter special folder names")]
         public string Filter {get;}
+        [Option("--all", Description="Show all special folders including those without a value")]
+        public bool All {get;}
         public void OnExecute(IConsole console) {
             Regex reFilter = null;
             if (!string.IsNullOrEmpty(Filter)) {
@@ -21,7 +23,7 @@ namespace NETTestBed
                 var name = Enum.GetName<Environment.SpecialFolder>(i);
                 if (reFilter != null && !reFilter.IsMatch(name)) continue;
                 var value = Environment.GetFolderPath(i);
-                console.WriteLine($"{name}: {value}");
+                if (All || !string.IsNullOrEmpty(value)) console.WriteLine($"{name}: {value}");
             }
        }
     }
