@@ -31,13 +31,14 @@ Show .NET Special Folders Path
 Usage: dotnet-local-info special-folders [options]
 
 Options:
-  -f|--filter <REGEX>  Filter special folder names
-  --all                Show all special folders including those without a value
-  -?|-h|--help         Show help information.
+  -f|--filter <REGEX>           Filter special folder names
+  --all                         Show all special folders including those without a value
+  --name <SPECIAL_FOLDER_NAME>  Retrieve the value of the special folder name
+  -?|-h|--help                  Show help information.
 Enumerates the actual values of the Environment.SpecialFolder Enum
 ```
 
-### Example
+### Example: retrieve non empty special folders
 
 ```
 ~ dotnet-local-info special-folders
@@ -56,4 +57,11 @@ System: /System
 ProgramFiles: /Applications
 MyPictures: /Users/gc/Pictures
 UserProfile: /Users/gc
+```
+
+### Example: retrieve a special folder value
+
+```
+~ dotnet-local-info special-folders --name Desktop
+/Users/gc/Desktop
 ```

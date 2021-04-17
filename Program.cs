@@ -13,6 +13,6 @@ Command line utils to retrieve .NET local info")]
 
         public void OnExecute(CommandLineApplication app) => app.ShowHelp();
 
-        public string GetVersion() => typeof(Program).Assembly.GetName().Version.ToString();
+        public static string GetVersion() => typeof(Program).Assembly.GetName().Version.ToString();
     }
 }
