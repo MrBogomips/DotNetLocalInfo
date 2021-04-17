@@ -1,6 +1,6 @@
 # Command line util to grab .NET local info
 
-## Command Help
+## Usage
 
 ```
 ~ dotnet-local-info -h
