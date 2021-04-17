@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NETTestBed
+namespace MrBogomips.Utils.DotNetLocalInfo
 {
     [Command(
         Description="Show .NET Special Folders Path",

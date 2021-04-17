@@ -1,7 +1,7 @@
 ﻿using System;
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NETTestBed
+namespace MrBogomips.Utils.DotNetLocalInfo
 {
     [Command(ExtendedHelpText=@"
 Command line utils to retrieve .NET local info")]
