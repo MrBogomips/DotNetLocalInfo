@@ -4,10 +4,18 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>dotnet-local-info</AssemblyName>
+    <PackageId>MrBogomips.Utils.DotNetLocalInfo</PackageId>
+    <Authors>Giovanni Costagliola</Authors>
+    <Description>Command line util to grab .NET local info</Description>
+    <PackageProjectUrl>https://github.com/MrBogomips/DotNetLocalInfo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MrBogomips/DotNetLocalInfo</RepositoryUrl>
+    <PackageTags>cli;environment;tool</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
